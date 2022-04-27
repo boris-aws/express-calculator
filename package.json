@@ -7,7 +7,6 @@
   "scripts": {
     "start": "node app.js",
     "test": "./node_modules/.bin/jest"
-    "e2e-test": "wait-on http://localhost:8080 && ./node_modules/.bin/jest src/__tests__/e2e"
   },
   "author": "Patrik Nygren",
   "license": "ISC",
