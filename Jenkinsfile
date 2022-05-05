@@ -4,23 +4,24 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                npm install
+                sh "nmp install"
             }
         }
         stage('Unit-test') {
             steps {
-                npm run unit-test
-            }
+                sh "npm run unit-test"
+              }
         }
         stage('Integration-test') {
             steps {
-                npm run integration-test
-            }
+                sh "npm run intergration-test"
+             }
         }
+
         stage('Deploy') {
             steps {
-                echo 'Deploying...'
+                "echo "Deploying""
             }
-    }
-}
+        }    
+    }   
 }
