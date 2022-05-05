@@ -1,17 +1,23 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
-        stage('Build') {
+        stage('Build-test') {
             steps {
-                echo "Building"
+                sh "nmp install"
             }
         }
-        stage('Test') {
+        stage('Unit-test') {
             steps {
-                echo "Testing"
-            }
+                sh "npm run unit-test"
+              }
         }
+        stage('Integration-test') {
+            steps {
+                sh "npm run intergration-test"
+             }
+        }
+
         stage('Deploy') {
             steps {
                 echo "Deploying"
