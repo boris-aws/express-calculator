@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              "nmp install"
+                sh "nmp install"
             }
         }
         stage('Unit-test') {
             steps {
-              "npm run unit-test"
+                sh "npm run unit-test"
               }
         }
         stage('Integration-test') {
             steps {
-              "npm run intergration-test"
+                sh "npm run intergration-test"
              }
         }
 
