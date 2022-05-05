@@ -17,8 +17,6 @@ pipeline {
                 sh "npm run intergration-test"
              }
         }
-
->>>>>>> test
         stage('Deploy') {
             steps {
                 echo "Deploying"
