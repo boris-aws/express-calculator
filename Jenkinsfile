@@ -7,11 +7,12 @@ pipeline {
               nmp install
             }
         }
-        stage('Unit-tests') {
+        stage('Unit-test') {
             steps {
               npm run unit-test
               }
-        
+        }
+        stage('Integration-test') {
             steps {
               npm run intergration-test
              }
