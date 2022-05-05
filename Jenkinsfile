@@ -1,19 +1,4 @@
 pipeline {
-<<<<<<< HEAD
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo "Building"
-            }
-        }
-        stage('Test') {
-            steps {
-                echo "Testing"
-            }
-        }
-=======
     agent any
 
     stages {
@@ -40,8 +25,4 @@ pipeline {
             }
         }    
     }   
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> test
