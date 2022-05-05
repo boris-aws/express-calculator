@@ -1,22 +1,22 @@
 pipeline {
-    agent any
+    agent none
 
     stages {
         stage('Build') {
             steps {
-                echo "Building"
+              nmp install
             }
         }
-        stage('Unit/integration tests') {
+        stage('Unit-tests') {
             steps {
-                ./node_modules/.bin/jest src/__tests__/unit
+              npm run unit-test
               }
         
             steps {
-                ./node_modules/.bin/jest src/__tests__/integration
+              npm run intergration-test
              }
         }
-        
+
         stage('Deploy') {
             steps {
                 echo "Deploying"
