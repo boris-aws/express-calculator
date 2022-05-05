@@ -9,12 +9,13 @@ pipeline {
         }
         stage('Unit/integration tests') {
             steps {
-                "./node_modules/.bin/jest src/__tests__/unit"
+                ./node_modules/.bin/jest src/__tests__/unit
               }
-        }
+        
             steps {
-                "./node_modules/.bin/jest src/__tests__/integration"
+                ./node_modules/.bin/jest src/__tests__/integration
              }
+        }
         
         stage('Deploy') {
             steps {
