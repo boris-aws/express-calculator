@@ -7,11 +7,15 @@ pipeline {
                 echo "Building"
             }
         }
-        stage('Test') {
+        stage('Unit/integration tests') {
             steps {
-                echo "Testing"
-            }
+                "./node_modules/.bin/jest src/__tests__/unit"
+              }
         }
+            steps {
+                "./node_modules/.bin/jest src/__tests__/integration"
+             }
+        
         stage('Deploy') {
             steps {
                 echo "Deploying"
